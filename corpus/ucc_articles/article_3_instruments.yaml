@@ -1,0 +1,26 @@
+
+# UCC Article 3: Negotiable Instruments
+
+definitions:
+  - clause: "§ 3-104"
+    text: "Negotiable Instrument."
+    commentary: "Defines what constitutes a negotiable instrument, such as a promissory note or a check."
+
+triggers:
+  - name: "Holder in Due Course"
+    clause: "§ 3-302"
+    text: "Holder in Due Course."
+    commentary: "A holder in due course is a holder who takes the instrument for value, in good faith, and without notice of any defense against or claim to it on the part of any person."
+  - name: "Signature Required"
+    clause: "§ 3-401"
+    text: "A person is not liable on an instrument unless the person signed the instrument..."
+    commentary: "A signature is fundamental for liability on an instrument."
+
+remedy_clauses:
+  - clause: "§ 3-305"
+    text: "Defenses and Claims in Recoupment."
+    commentary: "Lists the defenses available to a party, including fraud, duress, and illegality."
+  - name: "Fraudulent Alteration"
+    clause: "§ 3-407"
+    text: "Alteration."
+    commentary: "An alteration fraudulently made discharges a party whose obligation is affected by the alteration."

@@ -1,0 +1,31 @@
+[YOUR_FULL_NAME]
+[YOUR_STREET_ADDRESS]
+[YOUR_CITY], [YOUR_STATE] [YOUR_ZIP]
+
+[DATE]
+
+Office of the Secretary of State
+Authentications Unit
+[SECRETARY_OF_STATE_ADDRESS]
+
+RE: Request for Apostille for Certified Copy of a Birth Certificate
+
+To Whom It May Concern:
+
+Please find enclosed a certified copy of the birth certificate for [NAME_ON_DOCUMENT], issued by the State of [STATE_OF_BIRTH].
+
+I am requesting an apostille for this document for use in [DESTINATION_COUNTRY].
+
+Enclosed you will find:
+1. The certified copy of the birth certificate.
+2. A completed Apostille Request Form.
+3. A check/money order in the amount of $[FEE_AMOUNT] for the authentication fee.
+4. A self-addressed, stamped envelope for the return of the documents.
+
+Thank you for your time and attention to this matter.
+
+Sincerely,
+
+[YOUR_SIGNATURE]
+
+[YOUR_PRINTED_NAME]

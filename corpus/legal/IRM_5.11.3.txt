@@ -1,0 +1,74 @@
+**5.11.3 Jeopardy Levy without a Jeopardy Assessment**
+
+**Manual Transmittal**
+March 11, 2024
+
+**Purpose**
+(1) This transmits revised IRM 5.11.3, Notice of Levy, Jeopardy Levy without a Jeopardy Assessment.
+
+**Material Changes**
+(1) IRM 5.11.3.1 revised to update policy IRM citation.
+(2) IRM 5.11.3.1.2 revised to update policy and delegation IRM citation.
+(3) IRM 5.11.3.1.5 revised to update delegation IRM citation.
+(4) IRM 5.11.3.1.6 revised to update levy form numbers.
+(5) IRM 5.11.3.1.7 revised to update policy IRM citation.
+(6) IRM 5.11.3.2 revised to add that jeopardy levies are an exception to advanced notice of third party contacts.
+(7) IRM 5.11.3.3 revised to update policy IRM citation.
+(8) IRM 5.11.3.4 revised to update instructions for routing requests to Counsel for approval.
+(9) IRM 5.11.3.6(4) clarified personal delivery of notices in person.
+(10) Editorial changes made throughout.
+
+**Effect on Other Documents**
+This IRM supersedes IRM 5.11.3 dated November 20, 2017.
+
+**Audience**
+This material is used by SB/SE revenue officers and Civil Enforcement Advice and Support Operations (CEASO) employees.
+
+**Effective Date**
+(03-11-2024)
+
+**Signed by**
+Rocco A. Steco, Director, Collection Policy
+
+**5.11.3.1 (03-11-2024) Program Scope and Objectives**
+
+**Purpose:** This Internal Revenue Manual (IRM) section describes the process and procedures for preparation of a jeopardy levy. Specifically, the IRM section discusses:
+*   the required conditions for jeopardy levy.
+*   obtaining approval for a jeopardy levy.
+*   issuing notice to the taxpayer after the levy.
+*   the taxpayer's appeal rights after notice is provided.
+
+**Audience:** This IRM is designed for use by revenue officers, Civil Enforcement Advice and Support Operations (CEASO) employees, and their managers.
+
+**Policy Owner:** Director, Collection Policy. Collection Policy is an organization under Small Business/Self-Employed Division (SBSE), Collection.
+
+**Program Owner:** SBSE Collection Policy, Enforcement.
+
+**Primary Stakeholders:** SBSE revenue officers and Civil Enforcement Advice and Support Operations (CEASO) employees.
+
+**Background.** Normally, the notices and waiting periods described in IRM 5.11.1.3.2, Required Notices, a notice must be issued before property may be levied. However, if collection is in jeopardy, property may be levied sooner.
+
+Hereafter, any reference to jeopardy levy in this section shall refer only to a jeopardy levy without a jeopardy or termination assessment unless otherwise noted. Advance notice of third-party contacts may not be required in jeopardy situations, pursuant to IRC 7602(c)(3)(B). See IRM 25.27.1.3.2, Exceptions to IRC 7602(c) Notification Requirements, for further discussions of third-party contact requirements.
+
+If the IRS makes a quick assessment to recover refunds resulting from a false Form 1099–OID, Original Issue Discount filing, a revenue officer may make a jeopardy levy if collection is in jeopardy, after securing the required approvals outlined in IRM 5.11.3.4, Getting Approval. A taxpayer must be offered IRC 7429 appeal rights when: The notice and demand...
+
+**Appealing the Jeopardy Levy**
+In certain situations a taxpayer must be offered an appeal under IRC 7429 or in CDP under IRC 6330. See IRM 5.11.3.2 (2) and (3), respectively. As indicated at IRM 5.11.3.5(2), the taxpayer may have the option of obtaining an administrative and judicial determination on the jeopardy action in an expedited proceeding under IRC 7429 or in a CDP hearing under IRC 6330 that makes the determination under IRC 6330(f). The issue on review under IRC 7429 is whether the jeopardy levy is reasonable under the circumstances (collection is truly in jeopardy).
+
+If the taxpayer has not previously had a CDP hearing for any period on the jeopardy levy, the L2439/2439-A serves as the CDP notice for that period. Input the CDP notice Transaction Code (TC) 971 codes manually using Form 4844, since CDP notice TC971 codes cannot currently be input for L2439/2439-A systemically through ICS. See IRM 5.11.1.3.3.3, Issuing Notice of Intent to Levy/Notice of a Right to a Hearing in Field Collection, for guidance on the correct action code to use with TC 971.
+
+**Responsibilities**
+*   The Director, Collection Policy is responsible for all policies within the levy program.
+*   The National Program Manager, Enforcement is responsible for development and delivery of policies within the levy program.
+*   Managers of employees who issue levies are responsible for ensuring these procedures are followed and employee actions are timely and accurate.
+*   Revenue officers and Civil Enforcement Advice and Support Operations (CEASO) employees are responsible for following the procedures in this IRM.
+
+**Program Controls**
+National Quality Review System (NQRS), attribute 417, Managerial Approvals for Enforcement provides independent collection review information from which management may draw inferences regarding overall case quality for this attribute. See IRM 5.13.1, Embedded Quality Collection Field Organizations Administrative Guidelines. Embedded Quality Review System (EQRS), Collection managers use EQRS, attribute 416, Appropriate Enforcement Tools, and attribute 607, Taxpayer Rights to complete all case reviews for revenue officers. Jeopardy notices of levy must be approved by managers and Division Counsel. See IRM 1.2.2.6.3, Delegation Order 5-3 (Rev-1), Levy on Property in the Hands of a Third Party (not to include Levy Form 668-B). Certain manual refunds must be approved by managers. See IRM 1.2.2.4.1, Delegation Order 3-1 (Rev. 2), Credits and Refunds. Programming safeguards are built into the ICS system to prevent a levy from being generated on a module where the required notices have not been issued.
+
+**Terms/Definitions/Acronyms**
+Terms and acronyms associated with the field levy program include:
+*   **Automated Levy:** Automated levies are levies issued through the Automated Levy Programs. These levies are transmitted electronically. The proceeds are also received electronically.
+*   **Manual Levy:** A manual ICS levy is a paper levy that is manually prepared and issued by an RO.
+*   **Paper levy:** Either a manual or systemic levy on Form 668-A, Form 668-W, or Form 668-R that is prepared and issued by an RO.
+*   **Systemic Levy:** ICS systemic levies are initiated by ROs...

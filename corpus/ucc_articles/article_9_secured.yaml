@@ -1,0 +1,18 @@
+
+# UCC Article 9: Secured Transactions
+
+definitions:
+  - clause: "§ 9-102"
+    text: "Definitions and Index of Definitions."
+    commentary: "Key definitions for secured transactions."
+
+triggers:
+  - name: "Default"
+    clause: "§ 9-601"
+    text: "Rights After Default; Judicial Enforcement; Consignor or Buyer of Accounts, Chattel Paper, Payment Intangibles, or Promissory Notes."
+    commentary: "Outlines the rights of a secured party after a debtor defaults."
+
+remedy_clauses:
+  - clause: "§ 9-609"
+    text: "Secured Party's Right to Take Possession After Default."
+    commentary: "After default, a secured party may take possession of the collateral."

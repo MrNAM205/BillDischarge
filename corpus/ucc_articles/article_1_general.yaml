@@ -1,0 +1,18 @@
+
+# UCC Article 1: General Provisions
+
+definitions:
+  - clause: "§ 1-201"
+    text: "General Definitions."
+    commentary: "This section provides the foundational definitions for terms used throughout the UCC."
+
+triggers:
+  - name: "Good Faith"
+    clause: "§ 1-304"
+    text: "Every contract or duty within the Uniform Commercial Code imposes an obligation of good faith in its performance and enforcement."
+    commentary: "The bedrock principle of 'good faith' is non-disclaimable and applies to all transactions."
+
+remedy_clauses:
+  - clause: "§ 1-308"
+    text: "Performance or Acceptance Under Reservation of Rights."
+    commentary: "A party that with explicit reservation of rights performs or promises performance or assents to performance in a manner demanded or offered by the other party does not thereby prejudice the rights reserved. Such words as 'without prejudice,' 'under protest,' or the like are sufficient."

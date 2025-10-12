@@ -1,0 +1,27 @@
+# VeroBrix Engine Configuration
+
+engine:
+  watch_directory: "intake"
+
+nlp:
+  model: "en_core_web_sm"
+
+agents:
+  jarvis:
+    enabled: true
+  friday:
+    enabled: true
+  dialogos:
+    enabled: true
+  echo:
+    enabled: true
+  ultron:
+    enabled: false # Not implemented yet
+
+logging:
+  log_level: "INFO"
+  system_log_file: "logs/system.log"
+  provenance_log_file: "logs/provenance.log"
+
+narrator:
+  enabled: true

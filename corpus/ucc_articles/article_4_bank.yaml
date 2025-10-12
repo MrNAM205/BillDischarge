@@ -1,0 +1,18 @@
+
+# UCC Article 4: Bank Deposits and Collections
+
+definitions:
+  - clause: "§ 4-104"
+    text: "Definitions and Index of Definitions."
+    commentary: "Provides definitions specific to bank deposits and collections."
+
+triggers:
+  - name: "Wrongful Dishonor"
+    clause: "§ 4-402"
+    text: "Bank's Liability to Customer for Wrongful Dishonor."
+    commentary: "A payor bank is liable to its customer for damages proximately caused by the wrongful dishonor of an item."
+
+remedy_clauses:
+  - clause: "§ 4-403"
+    text: "Customer's Right to Stop Payment; Burden of Proof of Loss."
+    commentary: "A customer may stop payment of any item drawn on the customer's account."

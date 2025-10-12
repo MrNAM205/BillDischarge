@@ -1,0 +1,18 @@
+
+# UCC Article 2: Sales
+
+definitions:
+  - clause: "§ 2-103"
+    text: "Definitions and Index of Definitions."
+    commentary: "Key definitions related to sales contracts."
+
+triggers:
+  - name: "Statute of Frauds"
+    clause: "§ 2-201"
+    text: "Formal Requirements; Statute of Frauds."
+    commentary: "A contract for the sale of goods for the price of $500 or more is not enforceable unless there is some writing sufficient to indicate that a contract for sale has been made."
+
+remedy_clauses:
+  - clause: "§ 2-714"
+    text: "Buyer's Damages for Breach in Regard to Accepted Goods."
+    commentary: "Allows the buyer to recover damages for non-conforming goods."
