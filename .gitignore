@@ -1,4 +1,3 @@
-
 # Python
 __pycache__/
 *.pyc
@@ -7,33 +6,23 @@ __pycache__/
 .Python
 env/
 venv/
-pip-wheel-metadata/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
 .eggs/
 *.egg-info/
-*.egg
 dist/
 build/
+*.so
+*.egg
 
 # Node
 node_modules/
 npm-debug.log
 yarn-error.log
 
-# Secrets
+# Project-specific
 .env
-
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# IDE settings
-.idea/
-*.swp
-*.swo
-*.vscode/
-try2.code-workspace
+*.db
+*.sqlite3
+/tmp/uploads/
