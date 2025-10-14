@@ -1,12 +1,35 @@
-import sys
-import os
+from fastapi import FastAPI
+from backend.config.config import Config
+from backend.routes import (
+    annotator,
+    discharge,
+    document_routes,
+    endorsement,
+    generator_routes,
+    hello,
+    nationality,
+    packet,
+)
 
-# Add the parent directory to the Python path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+config = Config()
 
-from backend import create_app
+app = FastAPI(
+    title="Sovereign Financial Cockpit API",
+    description="API for managing sovereign financial instruments and processes",
+    version="0.1.0",
+)
 
-app = create_app()
+# Core routes
+app.include_router(hello.router)
+app.include_router(annotator.router)
+app.include_router(discharge.router)
+app.include_router(document_routes.router)
+app.include_router(endorsement.router)
+app.include_router(generator_routes.router)
+app.include_router(nationality.router)
+app.include_router(packet.router)
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5001, debug=True)
+
+@app.get("/")
+async def root():
+    return {"message": "Omni2 is online and sovereign."}

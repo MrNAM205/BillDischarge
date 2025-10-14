@@ -1,7 +1,7 @@
-from flask import Blueprint
+from fastapi import APIRouter
 
-bp = Blueprint('hello', __name__)
+router = APIRouter()
 
-@bp.route("/api/hello")
-def hello():
+@router.get("/api/hello")
+async def hello():
     return {"message": "Hello from the restructured backend!"}
