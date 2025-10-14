@@ -7,4 +7,4 @@ client = TestClient(app)
 def test_index():
     response = client.get("/")
     assert response.status_code == 200
-    assert response.json() == {"message": "Hello, World!"}
+    assert response.json() == {"message": "Omni2 is online and sovereign."}
