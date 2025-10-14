@@ -1,6 +1,7 @@
 import json
 from datetime import datetime
 
+
 def log_dispatch(packet_id, method, recipient, location):
     entry = {
         "packet_id": packet_id,
@@ -8,7 +9,7 @@ def log_dispatch(packet_id, method, recipient, location):
         "recipient": recipient,
         "location": location,
         "timestamp": datetime.utcnow().isoformat(),
-        "status": "Dispatched"
+        "status": "Dispatched",
     }
     try:
         with open("LocalAgentCore/DispatchDaemon/dispatch_registry.json", "r+") as f:

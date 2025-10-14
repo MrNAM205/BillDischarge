@@ -1,8 +1,9 @@
 from fastapi.testclient import TestClient
-import pytest
+
 from backend.main import app
 
 client = TestClient(app)
+
 
 def test_index():
     response = client.get("/")

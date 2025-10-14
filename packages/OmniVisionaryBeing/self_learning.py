@@ -1,9 +1,11 @@
 import json
 from datetime import datetime
 
+
 def log_failed_parse(input_text):
     with open("failed_parses.log", "a") as f:
         f.write(f"{datetime.now()} | {input_text}\n")
+
 
 def update_training_data(intent, new_phrase):
     with open("training_data.json", "r") as f:
@@ -19,7 +21,7 @@ def update_training_data(intent, new_phrase):
             json.dump(data, f, indent=2)
         print(f"✅ Added '{new_phrase}' to '{intent}'")
 
+
 def narrate_update(intent, phrase):
     print(f"📜 OVB has learned: '{phrase}' as part of '{intent}' intent.")
     print("🔒 Sovereign restrictions enforced. Core intents remain locked.")
-

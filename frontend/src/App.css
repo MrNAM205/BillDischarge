@@ -366,3 +366,22 @@ table button:hover {
 #scroll-to-top-btn:hover {
     background-color: #0056b3;
 }
+
+/* OmniStatus Component */
+.omni-status {
+    background-color: #2c2c2c;
+    color: #f0f2f5;
+    padding: 10px 20px;
+    margin: 0 0 20px 0;
+    border-radius: 8px;
+    border: 1px solid #3a3a3a;
+}
+
+.omni-status p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.omni-status .error {
+    color: #ff4d4f;
+}

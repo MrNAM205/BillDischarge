@@ -1,15 +1,9 @@
 from fastapi import FastAPI
+
 from backend.config.config import Config
-from backend.routes import (
-    annotator,
-    discharge,
-    document_routes,
-    endorsement,
-    generator_routes,
-    hello,
-    nationality,
-    packet,
-)
+from backend.routes import (annotator, discharge, document_routes, endorsement,
+                            generator_routes, hello, nationality, packet,
+                            status)
 
 config = Config()
 
@@ -28,6 +22,7 @@ app.include_router(endorsement.router)
 app.include_router(generator_routes.router)
 app.include_router(nationality.router)
 app.include_router(packet.router)
+app.include_router(status.router)
 
 
 @app.get("/")

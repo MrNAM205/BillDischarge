@@ -1,6 +1,8 @@
 import argparse
 import os
+
 from pypdf import PdfReader
+
 
 def scan_pdf(file_path, keywords):
     """
@@ -20,6 +22,7 @@ def scan_pdf(file_path, keywords):
     except Exception as e:
         print(f"Error reading or scanning PDF: {e}")
         return []
+
 
 def scan_image(file_path, keywords):
     """
@@ -43,12 +46,13 @@ def scan_image(file_path, keywords):
         print(f"An error occurred during image OCR: {e}")
         return []
 
+
 def scan_txt(file_path, keywords):
     """
     Scans a text file for a list of keywords.
     """
     try:
-        with open(file_path, 'r') as f:
+        with open(file_path, "r") as f:
             text = f.read()
         found_keywords = []
         for keyword in keywords:
@@ -60,13 +64,14 @@ def scan_txt(file_path, keywords):
         print(f"Error reading or scanning text file: {e}")
         return []
 
+
 def scan(file_path, keywords):
     """
     Main function to scan a document for keywords.
     Returns a list of found keywords.
     """
     file_ext = os.path.splitext(file_path)[1].lower()
-    
+
     found = []
     if file_ext == ".pdf":
         found = scan_pdf(file_path, keywords)
@@ -76,13 +81,23 @@ def scan(file_path, keywords):
         found = scan_txt(file_path, keywords)
     else:
         print(f"Error: Unsupported file type '{file_ext}'.")
-    
+
     return found
 
+
 def main():
-    parser = argparse.ArgumentParser(description="Scan a document for specific keywords or clauses.")
-    parser.add_argument("input", help="Path to the input document (PDF, image, txt, or md).")
-    parser.add_argument('--keywords', nargs='+', required=True, help='The keywords or phrases to search for.')
+    parser = argparse.ArgumentParser(
+        description="Scan a document for specific keywords or clauses."
+    )
+    parser.add_argument(
+        "input", help="Path to the input document (PDF, image, txt, or md)."
+    )
+    parser.add_argument(
+        "--keywords",
+        nargs="+",
+        required=True,
+        help="The keywords or phrases to search for.",
+    )
 
     args = parser.parse_args()
 
@@ -94,6 +109,7 @@ def main():
             print(f"- {keyword}")
     else:
         print(f"No keywords found in '{args.input}'.")
+
 
 if __name__ == "__main__":
     main()

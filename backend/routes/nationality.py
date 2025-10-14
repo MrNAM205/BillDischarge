@@ -1,10 +1,9 @@
-import os
-import sys
-
 from fastapi import APIRouter, Request
 
-from packages.LocalAgentCore.NationalityReclaimer.logic.generate_affidavit import generate_affidavit
-from packages.LocalAgentCore.NationalityReclaimer.logic.parse_nationality import parse_nationality
+from packages.LocalAgentCore.NationalityReclaimer.logic.generate_affidavit import \
+    generate_affidavit
+from packages.LocalAgentCore.NationalityReclaimer.logic.parse_nationality import \
+    parse_nationality
 
 router = APIRouter()
 
