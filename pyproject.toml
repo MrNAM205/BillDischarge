@@ -12,12 +12,14 @@ packages = [
 [tool.poetry.dependencies]
 python = ">=3.11,<3.14"
 cryptography = "^46.0.2"
-fastapi = "^0.119.0"
+fastapi = "^0.111.0"
 joblib = "^1.4.2"
-
+langchain = "^0.2.5"
+langchain-community = "^0.2.5"
 ollama = "^0.2.1"
 pillow = "^11.3.0"
 pypdf = "^6.0.0"
+pypdf2 = "^3.0.1"
 pytesseract = "^0.3.13"
 pytest = "^8.2.2"
 pyyaml = "^6.0.3"
@@ -32,8 +34,7 @@ werkzeug = "^3.0.3"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-[tool.poetry.group.dev.dependencies]
-pip-audit = ">=2.9.0,<3.0.0"
-pre-commit = "^3.7.1"
-types-pyyaml = "^6.0.12.20250915"
-types-requests = "^2.32.4.20250913"
+[dependency-groups]
+dev = [
+    "pip-audit (>=2.9.0,<3.0.0)"
+]

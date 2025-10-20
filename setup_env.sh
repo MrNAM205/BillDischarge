@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# This script sets up the Python virtual environment and installs dependencies.
+
+echo "--- Creating Python virtual environment in './venv' ---"
+python3 -m venv venv
+
+# Activate the virtual environment
+source venv/bin/activate
+
+echo "--- Upgrading pip... ---"
+pip install --upgrade pip
+
+echo "--- Installing project dependencies... ---"
+pip install \
+    cryptography==46.0.2 \
+    fastapi==0.111.0 \
+    joblib==1.4.2 \
+    langchain==0.2.5 \
+    langchain-community==0.2.5 \
+    ollama==0.2.1 \
+    pillow==11.3.0 \
+    pypdf==6.0.0 \
+    pypdf2==3.0.1 \
+    pytesseract==0.3.13 \
+    pytest==8.2.2 \
+    pyyaml==6.0.3 \
+    reportlab==4.2.0 \
+    requests==2.32.3 \
+    scikit-learn==1.5.0 \
+    spacy==3.7.5 \
+    "uvicorn[standard]"==0.29.0 \
+    werkzeug==3.0.3
+
+echo "---"
+echo "✅ Environment setup complete."
+echo "To activate the environment in your current shell, run: source venv/bin/activate"
+echo "After activation, you can run the backend with: uvicorn backend.main:app --reload"

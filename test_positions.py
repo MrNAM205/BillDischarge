@@ -87,7 +87,13 @@ def create_position_test_pdf(input_pdf_path, output_pdf_path):
         raise
 
 if __name__ == "__main__":
+    from backend.config.config import Config
+    import os
+    
+    # Get config
+    config = Config()
+    
     # Test with the latest uploaded bill
-    input_file = "uploads/024589e1-3cf7-4229-93c3-25d4bbc1792b.pdf"
-    output_file = "uploads/position_test.pdf"
+    input_file = os.path.join(config.upload_directory, "024589e1-3cf7-4229-93c3-25d4bbc1792b.pdf")
+    output_file = os.path.join(config.upload_directory, "position_test.pdf")
     create_position_test_pdf(input_file, output_file)

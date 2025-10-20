@@ -1,6 +1,5 @@
 import json
 
-
 def update_status(packet_id, new_status):
     with open("LocalAgentCore/DispatchDaemon/dispatch_registry.json", "r+") as f:
         registry = json.load(f)

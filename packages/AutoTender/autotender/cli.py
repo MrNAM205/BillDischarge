@@ -1,7 +1,5 @@
 import argparse
-
 from autotender import annotator
-
 
 def main():
     parser = argparse.ArgumentParser(description="AutoTender Document Tool")
@@ -11,7 +9,6 @@ def main():
 
     args = parser.parse_args()
     annotator.annotate(args.input, args.output, args.config)
-
 
 if __name__ == "__main__":
     main()

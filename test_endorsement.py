@@ -24,12 +24,16 @@ test_endorsement_data = {
 
 # Find a recent endorsed file to use as test input
 import glob
-uploads = glob.glob("uploads/*.pdf")
-original_files = [f for f in uploads if not f.startswith("uploads/endorsed_")]
+from backend.config.config import Config
+
+config = Config()
+
+uploads = glob.glob(os.path.join(config.upload_directory, "*.pdf"))
+original_files = [f for f in uploads if not f.startswith(os.path.join(config.upload_directory, "endorsed_"))]
 
 if original_files:
     test_input = original_files[0]
-    test_output = "uploads/test_visible_endorsement.pdf"
+    test_output = os.path.join(config.upload_directory, "test_visible_endorsement.pdf")
     
     print(f"Testing endorsement visibility...")
     print(f"Input: {test_input}")

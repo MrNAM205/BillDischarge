@@ -1,22 +1,18 @@
 from fastapi import APIRouter
+from backend.routes.remedy import last_remedy
 
 router = APIRouter()
+
 
 @router.get("/api/status", tags=["Status"])
 async def get_status():
     """
-    Reports the current operational state of the Omni2 agent.
-    
-    NOTE: This endpoint currently returns a static placeholder.
-    The connection to the live agent state via the MCP server is pending.
+    Reports the current operational state of the Omni2 agent,
+    including the last model, thoughts, and any fallback from the remedy scaffolder.
     """
     return {
-        "model": "local-autodetect",
-        "taskType": "remedy",
-        "cognitionLineage": [
-            "Task classified as 'remedy'",
-            "Using 'local-autodetect' for optimal cognition",
-            "Sovereign logic scaffolded"
-        ],
-        "status": "Operational"
+        "last_model": last_remedy["model"],
+        "last_thoughts": last_remedy["thoughts"],
+        "fallback": last_remedy.get("fallback", None),
+        "status": "Operational",
     }

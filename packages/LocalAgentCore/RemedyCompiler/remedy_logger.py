@@ -1,7 +1,6 @@
-import json
 import os
+import json
 from datetime import datetime
-
 
 def log_remedy(bill):
     date_str = datetime.now().strftime("%Y-%m-%d")

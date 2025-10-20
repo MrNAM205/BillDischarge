@@ -1,10 +1,12 @@
-from fastapi import APIRouter
+import os
+import sys
+
 from pydantic import BaseModel
 
-from packages.LocalAgentCore.InstrumentAnnotator.parse_layout import \
-    parse_layout
-from packages.LocalAgentCore.InstrumentAnnotator.suggest_endorsements import \
-    suggest_endorsements
+from fastapi import APIRouter
+
+from packages.LocalAgentCore.InstrumentAnnotator.parse_layout import parse_layout
+from packages.LocalAgentCore.InstrumentAnnotator.suggest_endorsements import suggest_endorsements
 from packages.LocalAgentCore.InstrumentAnnotator.tag_zones import tag_zones
 
 router = APIRouter()

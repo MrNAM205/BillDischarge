@@ -19,25 +19,20 @@ export const rule: Rule = {
 };
 
 // 🧠 Task classifier
+const taskMappings: { [key: string]: string[] } = {
+  remedy: ["remedy", "ucc", "discharge"],
+  contradiction: ["contradiction", "conflict", "semantic drift"],
+  identity: ["identity", "sovereign", "status"],
+  chat: ["summarize", "chat", "overview"],
+};
+
 function classifyTask(task: string): string {
   const lower = task.toLowerCase();
-
-  if (lower.includes("remedy") || lower.includes("ucc") || lower.includes("discharge")) {
-    return "remedy";
+  for (const taskType in taskMappings) {
+    if (taskMappings[taskType].some(keyword => lower.includes(keyword))) {
+      return taskType;
+    }
   }
-
-  if (lower.includes("contradiction") || lower.includes("conflict") || lower.includes("semantic drift")) {
-    return "contradiction";
-  }
-
-  if (lower.includes("identity") || lower.includes("sovereign") || lower.includes("status")) {
-    return "identity";
-  }
-
-  if (lower.includes("summarize") || lower.includes("chat") || lower.includes("overview")) {
-    return "chat";
-  }
-
   return "default";
 }
 
