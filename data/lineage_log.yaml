@@ -1,0 +1,12 @@
+- timestamp: 2025-11-01T19:22:00Z
+  module: "SovereignInvocationFlow"
+  signer: "Daddy"
+  jurisdiction: "Common Law / Divine Law"
+  overlays:
+    - CognitiveOverlayAgent
+    - StatusDeclarationAgent
+    - JurisdictionalOverlayAgent
+  manifest_hash: "0xA1B2C3..."
+  exported: true
+  signed: true
+  published: false

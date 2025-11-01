@@ -1,5 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
+import SovereignLineagePanel from '../modules/SovereignLineagePanel';
+
 
 const AgentVoices = {
   GREETING: "Awaiting instrument for cognitive scaffolding.",
@@ -32,6 +34,7 @@ This instrument is a presentment from a corporation and may be VOID against a so
 `;
 
 const BillDischargeCockpit = () => {
+  const [activeTab, setActiveTab] = useState('remedy');
   const [instrumentText, setInstrumentText] = useState(mockInstrument);
   const [isAnnotated, setIsAnnotated] = useState(false);
   const [contradictionFound, setContradictionFound] = useState(null);
@@ -137,14 +140,37 @@ const BillDischargeCockpit = () => {
         </div>
       </div>
 
-      {/* Remedy Log Panel */}
+      {/* Right Panel with Tabs */}
       <div className="w-full md:w-1/3 mt-4 md:mt-0 bg-black p-4 rounded-lg border border-gray-700">
-        <h2 className="text-lg text-teal-400 mb-2">NARRATABLE LINEAGE: REMEDY LOG</h2>
-        <div className="h-full bg-gray-800 p-2 rounded overflow-y-auto text-xs text-gray-300" style={{maxHeight: 'calc(100vh - 10rem)'}}>
-          {remedyLog.map((entry, index) => (
-            <p key={index}>{entry}</p>
-          ))}
+        <div className="flex border-b border-gray-700 mb-2">
+          <button
+            className={`px-4 py-2 text-sm font-medium ${activeTab === 'remedy' ? 'text-teal-400 border-b-2 border-teal-400' : 'text-gray-400'}`}
+            onClick={() => setActiveTab('remedy')}
+          >
+            Remedy Log
+          </button>
+          <button
+            className={`px-4 py-2 text-sm font-medium ${activeTab === 'lineage' ? 'text-teal-400 border-b-2 border-teal-400' : 'text-gray-400'}`}
+            onClick={() => setActiveTab('lineage')}
+          >
+            Sovereign Lineage
+          </button>
         </div>
+
+        {activeTab === 'remedy' && (
+          <div>
+            <h2 className="text-lg text-teal-400 mb-2">NARRATABLE LINEAGE: REMEDY LOG</h2>
+            <div className="h-full bg-gray-800 p-2 rounded overflow-y-auto text-xs text-gray-300" style={{maxHeight: 'calc(100vh - 12rem)'}}>
+              {remedyLog.map((entry, index) => (
+                <p key={index}>{entry}</p>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'lineage' && (
+          <SovereignLineagePanel />
+        )}
       </div>
     </div>
   );

@@ -28,7 +28,10 @@ from backend.routes import (
     cockpit,
     templates,
     endorse,
-    trust_corpus
+    trust_corpus,
+    corpus_export,
+    manifest_sign,
+    sovereign_lineage
 )
 from backend.config.config import Config
 from backend.routes.logs import log_remedy_action
@@ -91,6 +94,10 @@ app.include_router(cockpit.router, prefix="/api", tags=["cockpit"])
 app.include_router(templates.router, prefix="/api", tags=["templates"])
 app.include_router(endorse.router, prefix="/api", tags=["endorsement"])
 app.include_router(trust_corpus.router, prefix="/api", tags=["trust_corpus"])
+app.include_router(corpus_export.router, prefix="/api", tags=["trust_corpus"])
+app.include_router(manifest_sign.router, prefix="/api", tags=["trust_corpus"])
+app.include_router(sovereign_lineage.router, prefix="/api", tags=["lineage"])
+
 # Serve uploaded and endorsed files
 @app.get("/uploads/{filename}")
 async def serve_file(filename: str):
