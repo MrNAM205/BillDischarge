@@ -1,0 +1,10 @@
+
+# User Configuration
+user:
+  name: "John Doe"
+  address: "123 Main St, Anytown, USA"
+
+# Digital Signature Configuration
+signature:
+  private_key_path: "keys/private_key.pem"
+  certificate_path: "keys/certificate.pem"

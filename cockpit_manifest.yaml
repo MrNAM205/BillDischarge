@@ -1,0 +1,53 @@
+
+skill_pack:
+  name: "Lawful Endorsement Engine"
+  version: "1.0.0"
+  author: "Daddy"
+  modules:
+    - name: "EndorsementFlow"
+      type: "Frontend Component"
+      description: "User-facing workflow for uploading bills, selecting templates, and invoking digital endorsement."
+      dependencies:
+        - React
+        - Axios
+        - Endpoint: /api/endorse
+    - name: "endorse.py"
+      type: "Backend Route"
+      description: "FastAPI route for receiving endorsement requests and returning signed payloads with telemetry."
+      dependencies:
+        - FastAPI
+        - Pydantic
+        - EndorsementEngine
+    - name: "EndorsementEngine.py"
+      type: "Backend Agent"
+      description: "Modular engine for loading templates, injecting bill data, and applying digital signatures."
+      dependencies:
+        - cryptography
+        - datetime
+        - user_config.yaml
+        - config/endorsement_templates/
+    - name: "user_config.yaml"
+      type: "Configuration File"
+      description: "Stores signer identity, jurisdiction, and private key for digital signature generation."
+    - name: "endorsement_templates/"
+      type: "Template Directory"
+      description: "Text-based endorsement templates with placeholders for bill metadata."
+    - name: "bill_parser.py"
+      type: "Parsing Agent"
+      description: "Extracts bill metadata using external API, with fallback to legacy parser."
+      dependencies:
+        - External API (placeholder)
+        - Regex fallback
+  telemetry:
+    enabled: true
+    lineage:
+      - event: "endorsement_applied"
+      - event: "signature_generated"
+      - event: "template_selected"
+  manifest_export:
+    formats:
+      - YAML
+      - JSON
+      - PDF (optional)
+    notarization_ready: true
+    lineage_embedded: true

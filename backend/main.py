@@ -25,7 +25,10 @@ from backend.routes import (
     packet,
     logs,
     overview,
-    cockpit
+    cockpit,
+    templates,
+    endorse,
+    trust_corpus
 )
 from backend.config.config import Config
 from backend.routes.logs import log_remedy_action
@@ -85,6 +88,9 @@ app.include_router(generator_routes.router, prefix="/api", tags=["generation"])
 app.include_router(nationality.router, prefix="/api", tags=["nationality"])
 app.include_router(packet.router, prefix="/api", tags=["packets"])
 app.include_router(cockpit.router, prefix="/api", tags=["cockpit"])
+app.include_router(templates.router, prefix="/api", tags=["templates"])
+app.include_router(endorse.router, prefix="/api", tags=["endorsement"])
+app.include_router(trust_corpus.router, prefix="/api", tags=["trust_corpus"])
 # Serve uploaded and endorsed files
 @app.get("/uploads/{filename}")
 async def serve_file(filename: str):

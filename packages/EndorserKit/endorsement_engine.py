@@ -1,22 +1,29 @@
-from datetime import datetime # Added
+
+from datetime import datetime
+import os
+
+def load_template(name):
+    path = f"config/endorsement_templates/{name}.txt"
+    with open(path, "r") as f:
+        return f.read()
+
+def apply_endorsement(bill, template, signer, jurisdiction, private_key):
+    template_text = load_template(template)
+    filled = template_text.format(**bill)
+    signed = {
+        "endorsement": filled,
+        "signer": signer,
+        "jurisdiction": jurisdiction,
+        "timestamp": datetime.utcnow().isoformat(),
+        "signature": f"Signed with key {private_key[:6]}…"
+    }
+    return signed
 
 def classify_instrument(bill):
     if "description" in bill and "amount" in bill:
         if "issuer" in bill and "recipient" in bill:
             return "draft"  # Most utility bills are orders to pay
     return "note"
-
-def apply_endorsement(bill, instrument_type, text):
-    endorsement = {
-        "endorser_name": bill["recipient"],
-        "text": text,
-        "next_payee": "GFL Environmental Services",
-        "prev_hash": bill.get("prev_hash", "N/A"),
-        "signature": "SIMULATED_SIGNATURE_1234567890"
-    }
-
-    bill.setdefault("endorsements", []).append(endorsement)
-    return bill
 
 def prepare_endorsement_for_signing(bill_data: dict, endorsement_text: str) -> dict: # Added
     return {
